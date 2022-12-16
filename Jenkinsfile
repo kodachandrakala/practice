@@ -5,7 +5,7 @@ pipeline {
             
             steps {
                
-                docker run --name Build -d 3.8.1-adoptopenjdk-11:V2
+                docker run --name Build -d openjdk:V2
                 echo 'Hello, Maven'
                 sh 'mvn --version'
             }
