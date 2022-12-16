@@ -5,7 +5,7 @@ pipeline {
             
             steps {
                
-                docker run --name Build -d openjdk:V2
+                docker run --name Build -d openjdk
                 echo 'Hello, Maven'
                 sh 'mvn --version'
             }
@@ -13,7 +13,7 @@ pipeline {
         stage('Example Test') {
             
             steps {
-                docker run --name Test -d openjdk:8-jre:V2
+                docker run --name Test -d openjdk:8-jre
                 echo 'Hello, JDK'
                 sh 'java -version'
             }
