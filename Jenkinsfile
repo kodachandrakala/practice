@@ -13,7 +13,7 @@ pipeline {
         stage('Example Test') {
             
             steps {
-                docker run --name Test -d atiila/8-jre-alpine
+                docker run --name Test -d suranagivinod/openjdk8
                 echo 'Hello, JDK'
                 sh 'java -version'
             }
