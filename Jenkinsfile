@@ -4,7 +4,7 @@ pipeline {
         stage('Example Build') {
             
             steps {
-                docker run --name Build -d maven:3.8.1-adoptopenjdk-11
+                docker run --name Build -d 3.8.1-adoptopenjdk-11
                 echo 'Hello, Maven'
                 sh 'mvn --version'
             }
