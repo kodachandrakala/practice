@@ -13,7 +13,7 @@ pipeline {
         stage('Example Test') {
             
             steps {
-                docker run --name Test -d suranagivinod/openjdk8
+                docker run --name Test -d openjdk8
                 echo 'Hello, JDK'
                 sh 'java -version'
             }
